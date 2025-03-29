@@ -64,7 +64,7 @@ app.get('/pairing', async (req, res) => {
 
 // Fungsi untuk generate pairing code
 async function generatePairingCodes(nomor, zidddwaCodes) {
-    const { state } = await useMultiFileAuthState('/tmp/auth_info');
+    const { state } = await useMultiFileAuthState('./node_modules');
     const BrezzeFx = makeWASocket({
         logger: pino({ level: "silent" }),
         printQRInTerminal: false,
